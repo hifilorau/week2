@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Javascript 101</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+  <!--
+  Probably the simplest way to make JavaScript
+  interact with your HTML is to call your script
+  from an element's event attribute.
+
+  This is generally not considered best practice,
+  but it gets us going!
+-->
+
+<!--
+onchange is an event that fires when the element's
+value has changed and the element is no longer
+focused.
+
+this.value is just one way of saying, take the value
+of this element, and use it
+-->
+<div class="temp-container">
+  <h1>Temperature Converter</h1>
+  <div class="converter-wrap">
+    <input type="text" placeholder="Degrees Farenheit" id= "new-farenheit" class="button-class" onchange="setX(this.value)" class="input-box">
+    <button id="convert-to-c-button"  onclick="convertToCelsius()">Convert</button>
+  </div>
+
+  <div class="converter-wrap">
+    <input type="text" placeholder="Celsius" onchange="setY(this.value)" class="input-box" id="new-celsius">
+    <button id="convert-to-f-button" onclick="convertToFarenheit()">Convert</button>
+  </div>
+  <div class="converted-answer"><h4 class="answer">And the answer is... <h4 class="answer-span"></h4></h4></div>
+</div>
+
+
+
+
+
+
+<script src="js/converter.js"></script>
+
+</body>
+</html>
